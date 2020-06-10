@@ -2,8 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import{ HomeStack, SearchStack, StatsStack, BotStack } from './NavigationStack';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -12,37 +11,41 @@ export default function BottomTabNavigator({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
   // currently active tab. Learn more in the documentation:
   // https://reactnavigation.org/docs/en/screen-options-resolution.html
-  navigation.setOptions({ headerTitle: getHeaderTitle(route) });
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
         name="Home"
-        component={HomeScreen}
+        component={HomeStack}
         options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          title: 'Home',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="home" />,
         }}
       />
       <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
+        name="Search"
+        component={SearchStack}
         options={{
-          title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
+          title: 'Search',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="search1" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Stats"
+        component={StatsStack}
+        options={{
+          title: 'Stats',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="barschart" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Bot"
+        component={BotStack}
+        options={{
+          title: 'Bot',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="android1" />,
         }}
       />
     </BottomTab.Navigator>
   );
-}
-
-function getHeaderTitle(route) {
-  const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
-
-  switch (routeName) {
-    case 'Home':
-      return 'How to get started';
-    case 'Links':
-      return 'Links to learn more';
-  }
 }

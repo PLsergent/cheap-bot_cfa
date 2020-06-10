@@ -7,6 +7,10 @@ import useCachedResources from './hooks/useCachedResources';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import LinkingConfiguration from './navigation/LinkingConfiguration';
 
+import * as eva from '@eva-design/eva';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
+
 const Stack = createStackNavigator();
 
 export default function App(props) {
@@ -16,14 +20,19 @@ export default function App(props) {
     return null;
   } else {
     return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
-        <NavigationContainer linking={LinkingConfiguration}>
-          <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </View>
+      <>
+        <IconRegistry icons={EvaIconsPack} />
+        <ApplicationProvider {...eva} theme={eva.light}>
+          <View style={styles.container}>
+            {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
+            <NavigationContainer linking={LinkingConfiguration}>
+              <Stack.Navigator screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="Root" component={BottomTabNavigator} />
+              </Stack.Navigator>
+            </NavigationContainer>
+          </View>
+        </ApplicationProvider>
+       </>
     );
   }
 }
