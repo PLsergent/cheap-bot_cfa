@@ -2,10 +2,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { AppLoading } from "expo";
 
-import useCachedResources from './hooks/useCachedResources';
 import BottomTabNavigator from './navigation/BottomTabNavigator';
-import LinkingConfiguration from './navigation/LinkingConfiguration';
 
 import * as eva from '@eva-design/eva';
 import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
@@ -13,27 +12,43 @@ import { EvaIconsPack } from '@ui-kitten/eva-icons';
 
 const Stack = createStackNavigator();
 
-export default function App(props) {
-  const isLoadingComplete = useCachedResources();
+export default class App extends React.Component {
 
-  if (!isLoadingComplete) {
-    return null;
-  } else {
-    return (
-      <>
-        <IconRegistry icons={EvaIconsPack} />
-        <ApplicationProvider {...eva} theme={eva.light}>
-          <View style={styles.container}>
-            {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
-            <NavigationContainer linking={LinkingConfiguration}>
-              <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="Root" component={BottomTabNavigator} />
-              </Stack.Navigator>
-            </NavigationContainer>
-          </View>
-        </ApplicationProvider>
-       </>
-    );
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    }
+  }
+
+  async componentWillMount() {
+    this.setState({ loading: false });
+  }
+
+  render() {
+    if (this.state.loading) {
+      return (
+        <Root>
+          <AppLoading />
+        </Root>
+      );
+    } else {
+      return (
+        <>
+          <IconRegistry icons={EvaIconsPack} />
+          <ApplicationProvider {...eva} theme={eva.light}>
+            <View style={styles.container}>
+              {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
+              <NavigationContainer>
+                <Stack.Navigator screenOptions={{ headerShown: false }}>
+                  <Stack.Screen name="Root" component={BottomTabNavigator} />
+                </Stack.Navigator>
+              </NavigationContainer>
+            </View>
+          </ApplicationProvider>
+        </>
+      );
+    }
   }
 }
 
