@@ -19,3 +19,18 @@ https://plsergent.github.io/cheap-bot_cfa/
 cd cheap-bot_cfa/code
 expo start
 ```
+
+## Run tests
+```
+cd cheap-bot_cfa/code
+```
+
+Dev env:
+```
+npm run test-dev
+```
+
+Prod env:
+```
+npm run test
+```
