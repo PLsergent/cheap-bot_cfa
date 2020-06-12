@@ -21,16 +21,16 @@ export default class App extends React.Component {
     }
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     this.setState({ loading: false });
   }
 
   render() {
     if (this.state.loading) {
       return (
-        <Root>
+        <View style={styles.container}>
           <AppLoading />
-        </Root>
+        </View>
       );
     } else {
       return (

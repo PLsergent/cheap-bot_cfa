@@ -606,7 +606,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#2f95dc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                   <View
                                     style={
@@ -626,7 +647,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#ccc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                 </View>
                                 <Text
@@ -706,7 +748,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#2f95dc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                   <View
                                     style={
@@ -726,7 +789,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#ccc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                 </View>
                                 <Text
@@ -806,7 +890,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#2f95dc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                   <View
                                     style={
@@ -826,7 +931,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#ccc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                 </View>
                                 <Text
@@ -906,7 +1032,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#2f95dc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                   <View
                                     style={
@@ -926,7 +1073,28 @@ exports[`<App /> renders correctly 1`] = `
                                       ]
                                     }
                                   >
-                                    <Text />
+                                    <Text
+                                      allowFontScaling={false}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "color": "#ccc",
+                                            "fontSize": 30,
+                                          },
+                                          Object {
+                                            "marginBottom": -3,
+                                          },
+                                          Object {
+                                            "fontFamily": "anticon",
+                                            "fontStyle": "normal",
+                                            "fontWeight": "normal",
+                                          },
+                                          Object {},
+                                        ]
+                                      }
+                                    >
+                                      
+                                    </Text>
                                   </View>
                                 </View>
                                 <Text
