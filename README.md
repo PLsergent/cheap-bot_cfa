@@ -1,7 +1,7 @@
 # cheap-bot_cfa
 React native project, cheap bot for social media.
 
-Workflow (see `.github/workflows`):<br>
+Workflow (see `.github/workflows/`):<br>
 [![Main workflow CI](https://github.com/PLsergent/cheap-bot_cfa/workflows/Node.js%20CI/badge.svg)](https://github.com/PLsergent/cheap-bot_cfa/actions?query=workflow%3A%22Node.js+CI%22)
 
 ## Generate docs
